@@ -1,0 +1,75 @@
+""" Programa calculadora artimética amigable#
+    Realiza las 4 operaciones (+,-,* /) 
+    incorpora al modulo calculadora_aritmetica.py
+    Oscar Franco-Bedoya
+    Mayo 3-2021 """
+
+#---------------- Zona librerias------------
+import calculadora_aritmetica as calc
+
+
+#----------Definición de Funciones (Dividir)------------
+def menu_operaciones():
+  print("==================================================")
+  print("| Menu")
+  print("==================================================")
+  print("| Ingresa un numero para realizar la operacion.")
+  print("==================================================")
+  print("| 1. Calcular suma: (1)")
+  print("==================================================")
+  print("| 2. Calcular la resta: (2)")
+  print("==================================================")
+  print("| 3. Calcular multiplicación: (3)")
+  print("==================================================")
+  print("==================================================")
+  print("| 4. Calcular dicvisión: (4)")
+  print("==================================================")
+   
+  opc= int(input("ingresa una opcion:  "))
+  return opc
+  
+
+
+#======================================================================
+#   Algoritmo principal Punto de entrada a la aplicación 
+# =====================================================================
+ope=menu_operaciones()
+
+#======================================================================
+
+#punto de partida ingreso de variables
+a=float(input("ingrese un valor a:  "))
+b=float(input("ingrese un valor b:  "))
+
+#Definicion funciones
+def suma_f(a,b):
+  suma=a+b
+  return suma
+
+def resta_f(a,b):
+  resta=a-b
+  return resta
+
+def mul_f(a,b):
+  mult=a*b
+  return mult
+
+def divi_f(a,b):
+  divi=a/b
+  return divi
+
+
+
+#proceso
+if ope==1:
+  var_t=suma_f(a,b)
+elif ope==2:
+  var_t=resta_f(a,b)
+elif ope==3:
+  var_t=mul_f(a,b)
+elif ope==4:
+  var_t=divi_f(a,b)
+else:
+  print("ingrese otra opcion")
+  
+print("La operacion que usted selecciono fue: ",ope2,"y el resultado fue",var_t)
